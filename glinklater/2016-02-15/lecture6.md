@@ -1,14 +1,5 @@
 # Lecture 6
 
-## Results for "HandsOn" Task
-
-| 2D Block Size | 2D Grid Size | Kernel Execution Time (ms) | 1D Grid Size | Kernel Execution time (ms) -> 1 data item per thread | Kernel execution time (ms) -> 16 data items per thread |
-|:-|:-|:-|:-|:-|:-|
-| 32x32 | | | | | |
-| 32x16 | | | | | |
-| 16x32 | | | | | |
-| 16x16 | | | | | |
-
 ## Execution Model Summary
 
 Suppose we have 1000 blocks with 128 threads each -> How is this executed?
