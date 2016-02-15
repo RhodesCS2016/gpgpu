@@ -71,7 +71,7 @@ Limit exists because of a lack of registers (hardware limitation).
 
 * L1 Cache
   * Spillover for registers
-  * typically sits on chip in shared memor spillovery or texture Cache
+  * typically sits on chip in shared memory spillover or texture Cache
 
 
 * L2 Cache
@@ -82,8 +82,8 @@ Limit exists because of a lack of registers (hardware limitation).
 
 See diagram in lecture slides.
 
-* Resources at ANY ONE POINT IN TIME (any overrages get queued):
-  * Limites within SMM: [1] 32 concurrent blocks, [2] 1024 threads/block, [3] 2048 threads total
+* Resources at ANY ONE POINT IN TIME (any overages get queued):
+  * Limits within SMM: [1] 32 concurrent blocks, [2] 1024 threads/block, [3] 2048 threads total
   * 1 block of 2048 threads -> forbidden by [2]
   * 2 blocks of 1024 threads -> feasible on one SMM
   * 4 blocks of 512 threads -> feasible on one SMM
