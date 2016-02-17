@@ -93,3 +93,49 @@ Variables declared in kernel are allocated per thread
 Compiler controls where these variables are stored in physical memory
 * Registers (on-chip) -> fastest form of memory on SM, but limited.
 * Local memory (mostly off-chip)
+
+## Local memory
+
+* Register space spills into local memory
+* Amount per thread 512KB
+* Contains variables eligible for being registers but cannot fit.
+  * Arrays too large for registers
+  * Local arrays with dynamic indexes
+* Physically located in L1/L2 (2MB) Caches and device memory.
+
+## Constant memory
+
+* Special area of device memory
+* 64 KB
+* Read only from kernel
+  * Cache (10KB per SM)
+* Constants are declared at file scope
+* Constant values from host code
+* Intended to be broadcast to all threads in a warp - NB for performance.
+
+## Texture memory
+
+* Read only
+* Texture cache - 24KB per SM
+* Allocate and manage global memory
+* Qualify kernel pointer argument as ```const __restrict__```
+* Optimised for 2D spacial locality -> good performance for threads in a warp accessing 2D data
+* L1 shares this space on Maxwell arch.
+
+## Variable Qualifiers
+
+| Qualifier | Var Decl. | Memory | Scope | Lifetime |
+|:-|:-|:-|:-|:-|:-|:-|
+| | Atomic variables (not arrays) | register | thread | thread |
+| | Arrays | local | thread | thread |
+| \__shared__ | float* | shared | block | block |
+| \__device__ | float* | global | global | program |
+| \__constant__ | float* | constant | global | program |
+\* Can be scalar or array
+
+## Memory Constraints
+
+* 64K registers and 48KB shared Memory per SMM
+* In order for a second block to run on the same SMM, each block must at most use 32K registers and 24 KB shared Memory
+* To allow a third block each block must use at most 21.3K registers and 16KB shared memory... and so on
+* Tradeoff between memory use and parallelism **<- NB**
