@@ -1,0 +1,46 @@
+Unedited Kernel
+
+sumMatrixOnGPU2D <<<(256,256), (16,16)>>> DI: 1 -> (ms): 2.938912 
+sumMatrixOnGPU2D <<<(256,128), (16,32)>>> DI: 1 -> (ms): 2.592160 
+sumMatrixOnGPU2D <<<(128,256), (32,16)>>> DI: 1 -> (ms): 2.899872 
+sumMatrixOnGPU2D <<<(128,128), (32,32)>>> DI: 1 -> (ms): 2.568608 
+sumMatrixOnGPU2D <<<(256,64), (16,64)>>> DI: 1 -> (ms): 2.647008 
+sumMatrixOnGPU2D <<<(64,256), (64,16)>>> DI: 1 -> (ms): 2.927904 
+sumMatrixOnGPU2D <<<(512,32), (8,128)>>> DI: 1 -> (ms): 3.816352 
+sumMatrixOnGPU2D <<<(32,512), (128,8)>>> DI: 1 -> (ms): 2.568064 
+sumMatrixOnGPU2D <<<(1024,16), (4,256)>>> DI: 1 -> (ms): 5.630240 
+sumMatrixOnGPU2D <<<(16,1024), (256,4)>>> DI: 1 -> (ms): 2.560736 
+sumMatrixOnGPU2D <<<(2048,8), (2,512)>>> DI: 1 -> (ms): 7.079776 
+sumMatrixOnGPU2D <<<(8,2048), (512,2)>>> DI: 1 -> (ms): 2.574464 
+sumMatrixOnGPU2D <<<(4096,4), (1,1024)>>> DI: 1 -> (ms): 12.662592 
+sumMatrixOnGPU2D <<<(4,4096), (1024,1)>>> DI: 1 -> (ms): 2.611232 
+
+Single Dimention (n data items)
+
+sumMatrixOnGPU2D <<<(4096,1), (16,16)>>> DI: 16 -> (ms): 0.060576 
+sumMatrixOnGPU2D <<<(32768,1), (16,32)>>> DI: 1 -> (ms): 0.528800 
+sumMatrixOnGPU2D <<<(2048,1), (16,32)>>> DI: 16 -> (ms): 0.117024 
+sumMatrixOnGPU2D <<<(32768,1), (32,16)>>> DI: 1 -> (ms): 0.521632 
+sumMatrixOnGPU2D <<<(2048,1), (32,16)>>> DI: 16 -> (ms): 0.063712 
+sumMatrixOnGPU2D <<<(16384,1), (32,32)>>> DI: 1 -> (ms): 0.567776 
+sumMatrixOnGPU2D <<<(1024,1), (32,32)>>> DI: 16 -> (ms): 0.114976 
+sumMatrixOnGPU2D <<<(16384,1), (16,64)>>> DI: 1 -> (ms): 0.590368 
+sumMatrixOnGPU2D <<<(1024,1), (16,64)>>> DI: 16 -> (ms): 0.196288 
+sumMatrixOnGPU2D <<<(16384,1), (64,16)>>> DI: 1 -> (ms): 0.561888 
+sumMatrixOnGPU2D <<<(1024,1), (64,16)>>> DI: 16 -> (ms): 0.073120 
+sumMatrixOnGPU2D <<<(16384,1), (8,128)>>> DI: 1 -> (ms): 0.640992 
+sumMatrixOnGPU2D <<<(1024,1), (8,128)>>> DI: 16 -> (ms): 0.353760 
+sumMatrixOnGPU2D <<<(16384,1), (128,8)>>> DI: 1 -> (ms): 0.556352 
+sumMatrixOnGPU2D <<<(1024,1), (128,8)>>> DI: 16 -> (ms): 0.063360 
+sumMatrixOnGPU2D <<<(16384,1), (4,256)>>> DI: 1 -> (ms): 0.857888 
+sumMatrixOnGPU2D <<<(1024,1), (4,256)>>> DI: 16 -> (ms): 0.759904 
+sumMatrixOnGPU2D <<<(16384,1), (256,4)>>> DI: 1 -> (ms): 0.553632 
+sumMatrixOnGPU2D <<<(1024,1), (256,4)>>> DI: 16 -> (ms): 0.059840 
+sumMatrixOnGPU2D <<<(16384,1), (2,512)>>> DI: 1 -> (ms): 1.370016 
+sumMatrixOnGPU2D <<<(1024,1), (2,512)>>> DI: 16 -> (ms): 1.342144 
+sumMatrixOnGPU2D <<<(16384,1), (512,2)>>> DI: 1 -> (ms): 0.553376 
+sumMatrixOnGPU2D <<<(1024,1), (512,2)>>> DI: 16 -> (ms): 0.057184 
+sumMatrixOnGPU2D <<<(16384,1), (1,1024)>>> DI: 1 -> (ms): 3.580640 
+sumMatrixOnGPU2D <<<(1024,1), (1,1024)>>> DI: 16 -> (ms): 2.646144 
+sumMatrixOnGPU2D <<<(16384,1), (1024,1)>>> DI: 1 -> (ms): 0.553792 
+sumMatrixOnGPU2D <<<(1024,1), (1024,1)>>> DI: 16 -> (ms): 0.057376 
