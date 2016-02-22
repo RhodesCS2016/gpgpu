@@ -130,7 +130,10 @@ int main(int argc, char **argv)
     int dimx = 64; // default block size if no runtime parameters given
     int dimy = 2;
     int data_items = 1;
+<<<<<<< Updated upstream
     int singleDim = 0;
+=======
+>>>>>>> Stashed changes
 
     if(argc > 2)
     {
@@ -139,6 +142,7 @@ int main(int argc, char **argv)
         if (argc > 3)
         {
             data_items = atoi(argv[3]);
+<<<<<<< Updated upstream
             if (argc > 4)
             {
                 singleDim = atoi(argv[4]);
@@ -160,6 +164,19 @@ int main(int argc, char **argv)
     }
     else
         grid = dim3(nxy / (block.x * block.y * data_items), 1);
+=======
+        }
+    }
+    dim3 block(dimx, dimy);
+
+    double grid_x = (nx + block.x - 1) / block.x;
+    double grid_y = (ny + block.y - 1) / block.y;
+
+    double _grid_x = grid_x / sqrt(data_items); // Accounting for multiple data items per thread.
+    double _grid_y = grid_y / sqrt(data_items);
+	
+    dim3 grid(_grid_x, _grid_y);
+>>>>>>> Stashed changes
 
     // printf("NX:%d\nNY:%d\n\n", nx, ny);
 

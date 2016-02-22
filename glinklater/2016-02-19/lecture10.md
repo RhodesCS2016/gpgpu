@@ -113,6 +113,7 @@ cudaMallocManaged(void **ptr, size_t size, unsigned int flags = 0);
 
 ## Memory Access Patterns
 
+<<<<<<< Updated upstream
 * Most GPU applications tend to be limited by memory bandwidth
 * Since most device data access begins in global memory, optimizing bandwidth is important.
 * Memory operations are issued per warp
@@ -129,3 +130,6 @@ cudaMallocManaged(void **ptr, size_t size, unsigned int flags = 0);
     * Coalesced memory access occurs when all threads in warp access contiguous chunk of memory.
     * Aligned and coalesced access means a warp accesses a contiguous chunk of memory starting at an aligned address.
       * *This is the ideal situation.*
+=======
+* 
+>>>>>>> Stashed changes
