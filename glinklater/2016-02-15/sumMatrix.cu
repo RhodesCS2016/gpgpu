@@ -72,7 +72,7 @@ __global__ void sumMatrixOnGPU2D_n(float *A, float *B, float *C, int NX, int NY,
 	unsigned int n = idx + NUMDATA;
         for (int i = idx; i < n; i++)
         {
-            C[idx] = A[idx] + B[idx];
+            C[i] = A[i] + B[i];
         }
     }
 }
