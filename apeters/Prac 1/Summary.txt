@@ -1,0 +1,10 @@
+Summary:
+====================================================
+Newton:
+----------------------------------------------------
+Sadly I did not have time to fully test the system. But given time I would have an operation similar to that of my first Monte Carlo kernel, where each thread does a loop over the data instead of just working on one operation. I would also work on optimising the block sizes and attempt to bring the number generation into a single kernel operation instead of first generating a list to reduce the number of total fetches needed for the system.
+----------------------------------------------------
+Monte Carlo:
+----------------------------------------------------
+As can be clearly seen, I did not complete the task. Initially I attempted to write my own summing method using the block striding reduction method, and given time, I believe I can make it work. In the second method, written very quickly, but also incomplete, I attempted to use the THRUST library to make my task easier, what I did find was that, as with before, my random generation times were much faster than with the cuRAND functions.
+----------------------------------------------------
